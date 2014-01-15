@@ -5,7 +5,10 @@ http://docs.seleniumhq.org/
         
 Для некоторых тестов может потребоваться пользовательская библиотека (sideflow.js), скачать можно отсюда :
 https://github.com/Andrey-Zaharov/SED-testing/blob/master/addons/sideflow.js
-Добавляем её в селениум, в селениуме заходим Options->Options->[Selenium Core Extensions (user.js)]
+Добавляем её в селениум, в селениуме заходим 
+
+        Options->Options->[Selenium Core Extensions (user.js)]
+        
 Эта библиотека даёт возможность использования цикла `while`. 
 Например:
 в тесте задаем 2 переменных (`i` - текущая итерация; `n` - общее количество итераций):

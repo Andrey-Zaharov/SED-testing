@@ -388,7 +388,384 @@
 	<td></td>
 </tr>
 <!--}-->
-
+<!--Проверяем данные в документе {-->
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr/td[2]</td>
+	<td>Проект_Рд-12345</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[3]/td[2]</td>
+	<td>1234567890</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[10]/td[2]/span/strong</td>
+	<td>Захаров А.О.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[13]/td[2]</td>
+	<td>Курьер тест</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[13]/td[4]</td>
+	<td>Телефон курьера тест</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[14]/td[2]</td>
+	<td>${review_time}</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[14]/td[4]</td>
+	<td>${review_time}</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[16]/td[2]</td>
+	<td>Зарегистрирован</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[16]/td[4]</td>
+	<td>Нет</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[17]/td[2]</td>
+	<td>Распоряжение Мэра Москвы</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[17]/td[4]</td>
+	<td>Информационный канал</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[18]/td[2]/span</td>
+	<td>Захаров А.О. (Разработчики)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[19]/td[2]</td>
+	<td>Название проекта РД тест</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[20]/td[2]</td>
+	<td>Да</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=65535</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[23]/td[2]</td>
+	<td>Распоряжение Мэра Москвы</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[24]/td[2]</td>
+	<td>Окончательная редакция тест</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//td[@id='td_signed_by']/span</td>
+	<td>Начальник с ноутбуком (Разработчики)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[26]/td[2]</td>
+	<td>виза с заключением с учетом листа учета замечаний</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[27]/td[2]</td>
+	<td>Курьер забравший тест</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[27]/td[4]</td>
+	<td>Телефон курьера забравшего тест</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=65536</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dpage_0_h']/div/div[2]/strong</td>
+	<td>Страница 1 из 2</td>
+</tr>
+<!--} закончили проверку данных-->
+<!--Проверяем редактирование полей {-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.s-tool__title.o-hide-this</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr/td[2]/input</td>
+	<td>Проект_Рд-123457</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[3]/td[2]</td>
+	<td>12345678907</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[15]/td[2]/input</td>
+	<td>Курьер тестт</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[15]/td[4]/input</td>
+	<td>Телефон курьера тестт</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[19]/td[2]/select</td>
+	<td>label=Приказ Руководителя Аппарата Мэра и Правительства Москвы</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[19]/td[4]/select</td>
+	<td>label=Государственный Интернет-сайт правовой информации</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[21]/td[2]/textarea</td>
+	<td>Название проекта РД тестт</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[@id='is_directed_response']/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[26]/td[2]/select</td>
+	<td>label=Приказ Руководителя Аппарата Мэра и Правительства Москвы</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[27]/td[2]/textarea</td>
+	<td>Окончательная редакция тестт</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[29]/td[2]/select</td>
+	<td>label=виза без заключения</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[30]/td[4]/input</td>
+	<td>Телефон курьера забравшего тестт</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[30]/td[2]/input</td>
+	<td>Курьер забравший тестт</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[31]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//form[@id='document_card_edit']/div[6]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='dup_table']/tbody/tr/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//form[@id='document_card_edit']/div[6]/input</td>
+	<td></td>
+</tr>
+<!--}-->
+<!--Проверяем корректность сохраненных данных{-->
+<tr>
+	<td>assertText</td>
+	<td>css=td.b</td>
+	<td>Проект_Рд-123457</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span &gt; strong</td>
+	<td>Начальник с ноутбуком</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[3]/td[2]</td>
+	<td>12345678907</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=td.2 &gt; span &gt; strong</td>
+	<td>Захаров А.О.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=td.b3</td>
+	<td>Курьер тестт</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[13]/td[4]</td>
+	<td>Телефон курьера тестт</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[16]/td[2]</td>
+	<td>Зарегистрирован</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[17]/td[2]</td>
+	<td>Приказ Руководителя Аппарата Мэра и Правительства Москвы</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[17]/td[4]</td>
+	<td>Государственный Интернет-сайт правовой информации</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[19]/td[2]</td>
+	<td>Название проекта РД тестт</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=is_directed_response</td>
+	<td>Нет</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=td.5</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[27]/td[2]</td>
+	<td>Курьер забравший тестт</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[27]/td[4]</td>
+	<td>Телефон курьера забравшего тестт</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//table[@id='maintable']/tbody/tr[24]/td[2]</td>
+	<td>Окончательная редакция тестт</td>
+</tr>
+<!--}-->
+<!--Возвращаем данные обратно {-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=span.s-tool__title.o-hide-this</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr/td[2]/input</td>
+	<td>Проект_Рд-123456</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[3]/td[2]</td>
+	<td>1234567890</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[15]/td[2]/input</td>
+	<td>Курьер тест</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[15]/td[4]/input</td>
+	<td>Телефон курьера тест</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[19]/td[2]/select</td>
+	<td>label=Распоряжение Мэра Москвы</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[19]/td[4]/select</td>
+	<td>label=Информационный канал</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[21]/td[2]/textarea</td>
+	<td>Название проекта РД тест</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[26]/td[2]/select</td>
+	<td>label=Распоряжение Мэра Москвы</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[27]/td[2]/textarea</td>
+	<td>Окончательная редакция тест</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[@id='is_directed_response']/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[29]/td[2]/select</td>
+	<td>label=виза без заключения</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[30]/td[4]/input</td>
+	<td>Телефон курьера забравшего тест</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[30]/td[2]/input</td>
+	<td>Курьер забравший тест</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[31]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//form[@id='document_card_edit']/div[6]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='dup_table']/tbody/tr/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//form[@id='document_card_edit']/div[6]/input</td>
+	<td></td>
+</tr>
+<!--}-->
 </tbody></table>
 </body>
 </html>

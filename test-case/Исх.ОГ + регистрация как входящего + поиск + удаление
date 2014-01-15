@@ -1,0 +1,2830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://172.16.44.70/" />
+<title>новое обращение граждан</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">новое обращение граждан</td></tr>
+</thead><tbody>
+<!--авторизация-->
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//form[@id='login_form']/table/tbody/tr[3]/td[2]/select</td>
+	<td>label=Разработчики</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//form[@id='login_form']/table/tbody/tr[4]/td[2]/select</td>
+	<td>label=Захаров А.О.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//form[@id='login_form']/table/tbody/tr[5]/td[2]/input</td>
+	<td>646142</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//form[@id='login_form']/table/tbody/tr[8]/td[2]/input</td>
+	<td></td>
+</tr>
+<!--переходим на старый интерфейс {-->
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>if (selenium.isElementPresent(&quot;//a[contains(text(),'Старая версия системы')]&quot;) == true)&nbsp;&nbsp;{nextMove = 'goOldInter'}&nbsp;&nbsp;else if (selenium.isElementPresent(&quot;//a[contains(text(),'Старая версия системы')]&quot;) == false)&nbsp;&nbsp;{nextMove = 'noOldInter'}</td>
+	<td>nextMove</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${nextMove}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>${nextMove}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>goOldInter</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'Старая версия системы')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Старая версия системы</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>stopIntChange</td>
+	<td></td>
+</tr>
+<!--} переходим на старый интерфейс-->
+<tr>
+	<td>label</td>
+	<td>noOldInter</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Стаинтерфейс уже установлен</td>
+	<td></td>
+</tr>
+<tr>
+	<td>gotoLabel</td>
+	<td>stopIntChange</td>
+	<td></td>
+</tr>
+<tr>
+	<td>label</td>
+	<td>stopIntChange</td>
+	<td></td>
+</tr>
+<!--создаем новое исходящее ОГ-->
+<tr>
+	<td>click</td>
+	<td>//div[@id='menu_top_3']/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Новый документ...')])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr/td[2]/nobr/select</td>
+	<td>label=ИСХ.ОБР.ГР.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr/td[2]/nobr/input</td>
+	<td>auto_test-4294967296</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='sp2_to[a][0]']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_g_su_a_0</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_g_su_a_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='sp2_prepaired_by']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_SuPrepairedBy</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_SuPrepairedBy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Захаров А.О.')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[@id='og_short_content']/td[2]/textarea</td>
+	<td>краткое содержание автотест</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='tr_og_author']/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[20]/td[2]/input</td>
+	<td>Автотест Автотестович</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[20]/td[4]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[20]/td[4]/input</td>
+	<td>12.12.1969</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[22]/td[2]/input</td>
+	<td>Московский район</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[23]/td[2]/table/tbody/tr/td/input</td>
+	<td>индекс</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[23]/td[2]/table/tbody/tr/td[2]/input</td>
+	<td>улица</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[23]/td[2]/table/tbody/tr/td[3]/input</td>
+	<td>дом</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[23]/td[2]/table/tbody/tr/td[4]/input</td>
+	<td>корпус</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[23]/td[2]/table/tbody/tr/td[5]/input</td>
+	<td>строение</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[23]/td[2]/table/tbody/tr/td[6]/input</td>
+	<td>квартира</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[23]/td[2]/table/tbody/tr[2]/td/input</td>
+	<td>округ</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[23]/td[2]/table/tbody/tr[2]/td[2]/input</td>
+	<td>район города</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[24]/td[2]/input</td>
+	<td>телефон</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[24]/td[4]/input</td>
+	<td>email@email.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[25]/td[2]/select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[25]/td[2]/select</td>
+	<td>label=Беженец</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[25]/td[4]/select</td>
+	<td>label=Вдова инвалида, участника ВОВ</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='tr_og_author']/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[28]/td[2]/select</td>
+	<td>label=Коллективное</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[28]/td[4]/input[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[29]/td[2]/input</td>
+	<td>Автотест коллективный</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[29]/td[4]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[29]/td[4]/input</td>
+	<td>12.11.1968</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[31]/td[2]/input</td>
+	<td>район</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[32]/td[2]/table/tbody/tr/td/input</td>
+	<td>индекс</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[32]/td[2]/table/tbody/tr/td[2]/input</td>
+	<td>улица</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[32]/td[2]/table/tbody/tr/td[3]/input</td>
+	<td>дом</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[32]/td[2]/table/tbody/tr/td[4]/input</td>
+	<td>корпус</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[32]/td[2]/table/tbody/tr/td[5]/input</td>
+	<td>строение</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[32]/td[2]/table/tbody/tr/td[6]/input</td>
+	<td>квартира</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[32]/td[2]/table/tbody/tr[2]/td/input</td>
+	<td>административный округ</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[32]/td[2]/table/tbody/tr[2]/td[2]/input</td>
+	<td>район города</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[33]/td[2]/input</td>
+	<td>телефон</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[33]/td[4]/input</td>
+	<td>email@email.ru</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[34]/td[2]/select</td>
+	<td>label=БОМЖ</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[34]/td[4]/select</td>
+	<td>label=Ветеран труда</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[@id='rtext']/form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[40]/td[4]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[40]/td[4]/input[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[41]/td[2]/select</td>
+	<td>label=Напоминание</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[41]/td[4]/select</td>
+	<td>label=Электронная почта</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[41]/td[4]/select</td>
+	<td>label=Интернет</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[42]/td[2]/select</td>
+	<td>label=свыше 1000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[42]/td[4]/input</td>
+	<td>1234567890</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[43]/td[4]/input</td>
+	<td>2+3+4</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[49]/td[2]/select</td>
+	<td>label=Жалоба</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[49]/td[4]/select</td>
+	<td>label=4</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=td.b3 &gt; div &gt; select</td>
+	<td>label=Социальное обеспечение</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[50]/td[2]/div/select[2]</td>
+	<td>label=Организация социальных выплат города Москвы</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[50]/td[2]/div/select[3]</td>
+	<td>label=Социальные выплаты пенсионерам, инвалидам и отдельным категориям граждан</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[50]/td[2]/div/select[4]</td>
+	<td>label=Ежемесячная компенсационная выплата отдельным категориям граждан (вдовы, родители погибших военнослужащих, Герои …)</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[51]/td[2]/textarea</td>
+	<td>аннотация</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[53]/td[2]/label[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[54]/td[2]/textarea</td>
+	<td>комментарий</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[55]/td/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[56]/td[2]/select</td>
+	<td>label=На рассмотрении</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[56]/td[4]/select</td>
+	<td>label=Запланировано</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[57]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[57]/td[2]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=b &gt; a &gt; font</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=td.block_beige_head &gt; input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[59]/td[2]/select</td>
+	<td>label=Административная</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[59]/td[4]/select</td>
+	<td>label=Штраф</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Разработчики')])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Разработчики')])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_su_0_</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_su_0_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Разработчики')])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_su_1_</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_su_1_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Тестировщик')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[62]/td[2]/input</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[62]/td[4]/select</td>
+	<td>label=Приказ</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[63]/td[2]/input</td>
+	<td>1234567890</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[63]/td[4]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=b &gt; a &gt; font</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//td[@id='rtext']/form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Действия исполнителя при рассмотрении вопроса:')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[66]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[67]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[68]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[66]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[67]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[68]/td[3]/input</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[71]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[72]/td[2]/select</td>
+	<td>label=Жалоба</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[72]/td[4]/select</td>
+	<td>label=4</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[73]/td[2]/div/select</td>
+	<td>label=Капитальный ремонт многоквартирных домов</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[73]/td[2]/div/select[2]</td>
+	<td>label=Капитальный ремонт многоквартирных домов</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[73]/td[2]/div/select[3]</td>
+	<td>label=Включение дома в программу проведения капитального ремонта</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[74]/td[2]/textarea</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[74]/td[2]/textarea</td>
+	<td>аннотация</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[75]/td[2]/input</td>
+	<td>да</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[76]/td[2]/label[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[76]/td[2]/label[3]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[77]/td[2]/textarea</td>
+	<td>комментарий</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[78]/td/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[79]/td[2]/select</td>
+	<td>label=Без значения</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[79]/td[4]/select</td>
+	<td>label=Ознакомлен</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[80]/td[2]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=b &gt; a &gt; font</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#og_sentence_addition_2 &gt; td.block_beige_head &gt; input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[82]/td[2]/select</td>
+	<td>label=Иные санкции</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[82]/td[4]/select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[82]/td[4]/select</td>
+	<td>label=Внесение в реестр недобросовестных поставщиков (ФАС)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Разработчики')])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_su_2_</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_su_2_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Бикметова А.Ф.')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Разработчики')])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_su_3_</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_su_3_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Тестировщик')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[85]/td[2]/input</td>
+	<td>150</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[85]/td[4]/select</td>
+	<td>label=Распоряжение</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[86]/td[2]/input</td>
+	<td>0987654321</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[86]/td[4]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=b &gt; a &gt; font</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[88]/td/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[89]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[90]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[90]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[89]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[91]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[91]/td[3]/input</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[96]/td[2]/select</td>
+	<td>label=положительно</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Результат')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//tr[@id='response-row-0']/td[2]/select</td>
+	<td>label=искажена инф-ция</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='response-row-1']/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//tr[@id='response-row-2']/td[2]/select</td>
+	<td>label=чиновники наказаны</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='response-row-0']/td[4]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='response-row-1']/td[4]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='response-row-2']/td[4]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[101]/td[2]/textarea</td>
+	<td>примечание</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[@id='info-row-0']/td[2]/textarea</td>
+	<td>текст информации</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[@id='info-row-1']/td[2]/div/input</td>
+	<td>12.12.2013</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='sp2_info_author']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_SuInfoAuthor</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_SuInfoAuthor</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[103]/td/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[107]/td[2]/select</td>
+	<td>label=ответ автору</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[108]/td/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[@id='vdelo-row-0']/td[2]/textarea</td>
+	<td>в дело</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='vdelo-row-0']/td[4]/img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=b &gt; a &gt; font</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='sp2_vdelo_prepaired']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_SuVdeloPrepaired</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_SuVdeloPrepaired</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Кузьмин А.А.')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='sp2_vdelo_signed']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_SuVdeloSigned</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_SuVdeloSigned</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='tr_files']/td/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[@id='trf_0']/td[2]/input[2]</td>
+	<td>C:\Users\Тестер1\Desktop\test\test_upload.docx</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='trf_0']/td[2]/label[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='tr_files']/td/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[@id='trf_1']/td[2]/input[2]</td>
+	<td>C:\Users\Тестер1\Desktop\test\test_upload.docx</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='trf_1']/td[2]/label[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tr[@id='trf_0']/td[2]/input</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='n[1]']</td>
+	<td>321</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=save_view</td>
+	<td></td>
+</tr>
+<!--создаем резолюцию-->
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Добавить резолюцию к документу&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;Добавить резолюцию к документу&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>_blank</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='mode0']/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//li[@id='mode0']/label</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='sp2_author']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_ResolutionEdit_su_author</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_ResolutionEdit_su_author</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Разработчики')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_ResolutionEdit_su_1__1_</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_ResolutionEdit_su_1__1_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Захаров А.О.')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//div[@id='ed_container_1_1']/select</td>
+	<td>label=Месяц</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='to_user_1_1_container']/div[5]/input</td>
+	<td>примечание</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='resolution_edit_1']/tbody/tr[4]/td[2]/div/textarea</td>
+	<td><br />поручение</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Разработчики')])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_ResolutionEdit_curator_su_1_</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_ResolutionEdit_curator_su_1_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Бикметова А.Ф.')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='resolution_edit_1']/tbody/tr[5]/td[2]/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='ef_reason_category_container_1']/p/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='resolution_edit_1']/tbody/tr[5]/td[2]/div[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='ef_reason_container_1']/p[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='sp2_to[n2][ordi1]']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_ResolutionEdit_su_2__1_</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_ResolutionEdit_su_2__1_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Тестировщик')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//div[@id='ed_container_2_1']/select</td>
+	<td>label=Оперативно</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='control_container_2_1']/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='to_user_2_1_container']/div[5]/input</td>
+	<td>примечание</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='resolution_edit_2']/tbody/tr[4]/td[2]/div/textarea</td>
+	<td>поручение<br /></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='resolution_edit_2']/tbody/tr[5]/td[2]/div/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'5. Тест')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='resolution_edit_2']/tbody/tr[5]/td[2]/div[2]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='ef_reason_container_2']/p/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id='sp2_curator[n2]']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>sel_user_ResolutionEdit_curator_su_2_</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>name=sel_user_ResolutionEdit_curator_su_2_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Бикметова А.Ф.')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=submit_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<!--Проверяем поиск-->
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<!--переходим на новый интерфейс-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=div.curl &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='n_header']/div/div[4]/a</td>
+	<td></td>
+</tr>
+<!------------------>
+<!--Расширенный поиск-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='left_top_panel']/a[2]</td>
+	<td></td>
+</tr>
+<!--проверяем исх.№ - в расширенном поиске-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='covering_letter_start']/td/input[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='covering_letter_start']/td/label[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[17]/td[2]/input</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.markfound</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='left_top_panel']/a[2]</td>
+	<td></td>
+</tr>
+<!--Проверяем дату-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[@id='covering_letter_start']/td/label[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=td.2 &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=b &gt; a &gt; font</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@onclick=&quot;popUpCalendar(this, [document.forms.search.out_date_t], 'd.mm.yyyy')&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=b &gt; a &gt; font</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.s-table__clamping &gt; b</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='left_top_panel']/a[2]</td>
+	<td></td>
+</tr>
+<!--Проверяем краткое содержание-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[24]/td[2]/input</td>
+	<td>краткое содержание автотест</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=span.markfound</td>
+	<td>краткое содержание автотест</td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='left_top_panel']/a[2]</td>
+	<td></td>
+</tr>
+<!--Проверяем тип напоминание-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr/td/input[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=document_kind</td>
+	<td>label=Напоминание</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=search_down</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем вид поступления-->
+<tr>
+	<td>select</td>
+	<td>id=delivery_type</td>
+	<td>label=Интернет</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=og_num_registered_letter</td>
+	<td>1234567890</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=search_down</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем № заказнго письма-->
+<tr>
+	<td>type</td>
+	<td>id=og_num_registered_letter</td>
+	<td>1234567890</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=search_down</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем Кол-во листов, прил., экз-->
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[33]/td[4]/input</td>
+	<td>2+3+4</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем Вид документа-->
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[31]/td[2]/select</td>
+	<td>label=Напоминание</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем Вид поступления-->
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[31]/td[4]/select</td>
+	<td>label=Интернет</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем Тип повторности-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[30]/td[4]/input[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем количество подписей-->
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[32]/td[2]/select</td>
+	<td>label=свыше 1000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по полю Результат-->
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[38]/td[2]/select</td>
+	<td>label=положительно</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по полю Причина возврата исполнителю-->
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[39]/td[2]/select</td>
+	<td>label=искажена инф-ция</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по чекбоксу С выездом на место-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[40]/td[2]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по чекбоксу Рассмотрено на комиссии-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[39]/td[4]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по чекбоксу Участие заявителя-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[40]/td[4]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по полю Виновные наказаны-->
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[41]/td[2]/select</td>
+	<td>label=чиновники наказаны</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по чекбоксу Проверено-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[41]/td[4]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по полю Отсканировано-->
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[42]/td[2]/input</td>
+	<td>Захаров А.О.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по полю Примечание-->
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[43]/td[2]/textarea</td>
+	<td>примечание</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по полю Информация-->
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[45]/td[2]/input</td>
+	<td>текст информации</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по Информация-Автор-->
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[46]/td[2]/input</td>
+	<td>Начальник с ноутбуком</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по Информация-Дата-->
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[46]/td[4]/input</td>
+	<td>10.12.2013</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[47]/td/input</td>
+	<td>13.12.2013</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем по полю Исполнение-->
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[49]/td[2]/select</td>
+	<td>label=ответ автору</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем радио Списано в дело-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[50]/td[2]/input[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем поле "кто списал в дело"-->
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[51]/td[2]/input</td>
+	<td>Кузьмин А.А.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем поле текст списания в дело-->
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[52]/td[2]/input</td>
+	<td>в дело</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем поле Списано в дело - Подписал-->
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[51]/td[4]/input</td>
+	<td>Начальник с ноутбуком</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем поле Куратор-->
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[55]/td[2]/input</td>
+	<td>Бикметова А.Ф.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем Вид обращения & Категория-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[37]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Вопрос 1:')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[38]/td[2]/select</td>
+	<td>label=Жалоба</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[38]/td[4]/select</td>
+	<td>label=4</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем Тема вопроса-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[37]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Вопрос 1:')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=td.b3 &gt; div &gt; select</td>
+	<td>label=Социальное обеспечение</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[39]/td[2]/div/select[2]</td>
+	<td>label=Организация социальных выплат города Москвы</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[39]/td[2]/div/select[3]</td>
+	<td>label=Социальные выплаты пенсионерам, инвалидам и отдельным категориям граждан</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[39]/td[2]/div/select[4]</td>
+	<td>label=Ежемесячная компенсационная выплата отдельным категориям граждан (вдовы, родители погибших военнослужащих, Герои …)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем поле аннотация-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[37]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Вопрос 1:')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[41]/td[2]/textarea</td>
+	<td>аннотация</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем Тип повторности+комментарий-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[37]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Вопрос 1:')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[43]/td[2]/input[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr[44]/td[2]/textarea</td>
+	<td>комментарий</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Проверяем Обоснованность вопроса+Решение вопроса-->
+<tr>
+	<td>click</td>
+	<td>//table[@id='maintable']/tbody/tr[37]/td/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Вопрос 1:')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//a[contains(text(),'Исполнение вопроса:')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[46]/td[2]/select</td>
+	<td>label=На рассмотрении</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr[46]/td[4]/select</td>
+	<td>label=Запланировано</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='maintable']/tbody/tr/td/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<!------------------>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#menu_bottom_3 &gt; div &gt; ul.sd-tab__dropdown-list &gt; li.search &gt; a</td>
+	<td></td>
+</tr>
+<!--Заканчиваем поиск переходим к карточке документа-->
+<tr>
+	<td>click</td>
+	<td>//tr[@id='covering_letter_start']/td/label[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=out_number</td>
+	<td>4294967296</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=search_down</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>ИСХ.ОБР.ГР.-auto_test-4294967296</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=span.s-pager__active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='mtable']/tbody/tr/td[5]/div</td>
+	<td></td>
+</tr>
+<!--Регистрируем документ как входящий-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>//div[@id='s-doc-icons']/a[4]/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='s-doc-icons']/a[4]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>//table[@id='maintable']/tbody/tr/td[2]/select</td>
+	<td>label=вх.обр</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//table[@id='maintable']/tbody/tr/td[2]/input</td>
+	<td>auto_test-4294967296</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//form[@id='document_card_edit']/div[8]/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@id='save_view']</td>
+	<td></td>
+</tr>
+<!--не переходит на вх док-т при регистрации как входящего-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='menu_bottom_2']/div/ul/li/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='mtable']/tbody/tr/td[4]/div/b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[2]/div[2]/div[2]/div/div[2]/div/div</td>
+	<td>Входящие письма граждан : карточка регистрации документа</td>
+</tr>
+<!--Добавляем исполнение-->
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//table[@id='rez-list']/tbody/tr[2]/td/div/div/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='rez-list']/tbody/tr[2]/td/div/div/a[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//div[@id='res_exec']/div[4]/fieldset/div/textarea</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='res_exec']/div[5]/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='res_exec']/div[7]/div/div/input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<!--Удаляем исполнение-->
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'Удалить...')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Удалить...</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<!--Удаляем резолюцию-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(text(),'Удалить...')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseOkOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Удалить...</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Удаление резолюции. Вы уверены?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td>_blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<!--Удаляем документ Входящий-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[3]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseOkOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.s-tool__item.s-tool_11 &gt; span.s-tool__icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Удаление документа. Вы уверены?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='menu_bottom_3']/div/ul/li[7]/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//table[@id='mtable']/tbody/tr/td[4]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>chooseOkOnNextConfirmation</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.s-tool__item.s-tool_11 &gt; span.s-tool__icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Удаление документа. Вы уверены?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>4000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'Старая версия системы')]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
